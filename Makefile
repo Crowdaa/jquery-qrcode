@@ -12,10 +12,7 @@ minify:
 	head -2 src/jquery.qrcode.js	>> /tmp/jquery.qrcode.tmp.js
 	cat src/qrcode.js		>> /tmp/jquery.qrcode.tmp.js
 	tail -n +3 src/jquery.qrcode.js	>> /tmp/jquery.qrcode.tmp.js
-	curl --data-urlencode "js_code@/tmp/jquery.qrcode.tmp.js" 	\
-		-d "output_format=text&output_info=compiled_code&compilation_level=SIMPLE_OPTIMIZATIONS" \
-		http://closure-compiler.appspot.com/compile		\
-		> jquery.qrcode.min.js
+	curl -X POST -s --data-urlencode 'input@/tmp/jquery.qrcode.tmp.js' https://javascript-minifier.com/raw > jquery.qrcode.min.js
 
 homepage_build:
 	pandoc -A ~/.pandoc.header.html -s README.md -o index.html
