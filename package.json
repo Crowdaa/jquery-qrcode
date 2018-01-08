@@ -1,0 +1,13 @@
+{
+   "name": "jquery-qrcode",
+   "version": "1.0.1",
+   "description": "Forked from http://jeromeetienne.github.com/jquery-qrcode",
+   "main": "jquery.qrcode.min.js",
+   "repository": {
+     "type": "git",
+     "url": "git+https://gitlab.com/djiworks/jquery-qrcode.git"
+   },
+   "keywords": ["jquery", "qrcode"],
+   "author": "Fork from http://jeromeetienne.github.com/jquery-qrcode",
+   "license": "MIT"
+}
